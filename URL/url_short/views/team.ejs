@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- basic -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- mobile metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<!-- site metas -->
+<title>Team</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content=""> 
+<!-- bootstrap css -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<!-- style css -->
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<!-- Responsive-->
+<link rel="stylesheet" href="css/responsive.css">
+<!-- fevicon -->
+<link rel="icon" href="images/fevicon.png" type="image/gif" />
+<!-- Scrollbar Custom CSS -->
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+<!-- Tweaks for older IEs-->
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+
+<!-- owl stylesheets --> 
+<link rel="stylesheet" href="css/owl.carousel.min.css">
+<link rel="stylesheet" href="css/owl.theme.default.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
+</head>
+<body>
+  <!--header section start -->
+  <div class="header_section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3">
+          <div style="width: 130px;" class="logo"><a href="index.ejs"><img src="images/URL_logo.png"></a></div>
+        </div>
+        <div class="col-md-9">
+          <div class="menu_text">
+            <ul>
+              <div class="togle_3">
+                <div class="menu_main">
+                  <div class="follow_social_icon">
+                    <ul>
+                      <li><a href="https://www.facebook.com/kou92official"><img src="images/fb-icon1.png"></a></li>
+                      <li><a href="https://twitter.com/kou92official"><img src="images/twitter-icon1.png"></a></li>
+                      <li><a href="https://www.linkedin.com/school/kocaeli-university/"><img src="images/linkden-icon1.png"></a></li>
+                      <li><a href="https://instagram.com/kou92official"><img src="images/instagram-icon1.png"></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="shoping_bag"><img src="images/search-icon.png"></div>
+              </div> 
+              <div id="myNav" class="overlay">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <div class="overlay-content">
+                <a href="index.ejs">Anasayfa</a>
+                <a href="statistics.ejs">İstatistikler</a>
+                <a href="about.ejs">URL Kısaltıcı Nedir?</a>
+                <a href="choose.ejs">Sayılarla Sayfamız</a>
+                <a href="team.ejs">URL Kısaltma İşlemleri</a>
+                <a href="contact.ejs">İletişim</a>
+              </div>
+              </div>
+              <span class="navbar-toggler-icon"></span>
+              <span onclick="openNav()"><img src="images/toggle-icon.png" class="toggle_menu"></span>
+            </ul>
+          </div>      
+        </div>
+      </div>
+    </div>
+    <!-- header section end -->
+    <!-- team section start -->
+    <div class="team_section layout_padding">
+      <div class="container">
+        <h1 class="choose_taital"><span>URL Kısaltma İşlemleri</span></h1>
+        
+        <div class="team_section_2 layout_padding">
+          <div class="container">
+            <div class="images_main_1">
+              <div class="row">
+                <div class="col-sm-5">
+                  <div class="image_4"><img src="images/url.png"></div>
+                </div>
+                <div class="col-sm-7">
+                  <h2 class="consectetur_text">URL Kısaltma</h2><div class="box" ></div>
+                  <div class="box" >
+                    <section >
+                      <form action="/shortUrls" method="post">
+                        <div class="form-group">
+                          <h3> Lütfen kısaltmak istediğiniz URL'yi giriniz...</h3>
+                          <input width="100px;"  input type="url" name="fullUrl" id="fullUrl" class="form-control" >
+                        </div>
+                        <br>
+                        <div class="form-group">
+                          <h3> Oluşturulan URL</h3>
+                          <div class="alert alert-success">
+                            <strong><a href="<%= data.short %> " target="_blank">http://localhost:3000/<%= data.short %></a> </strong> 
+                          </div>
+                        <br>
+                        <div class="col-lg-4 col-md-4 col-sm-6 mb-30">
+                          <div class="pd-20 card-box text-center height-100-p">
+                            <div class="max-width-200 mx-auto">
+                              <button
+                                type="button"
+                                class="btn mb-20 btn-primary btn-block"
+                                id="sa-success"
+                              >
+                                Kopyala
+                              </button>
+                              <button
+                                type="submit"
+                                class="btn mb-20 btn-primary btn-block"
+                                id="sa-custom-position"
+                              >
+                                Kısalt
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                    
+                      </form>
+                  </section>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="images_main">
+              <div class="row" style="height: 50%;">
+                <div class="col-sm-7">
+                  <h2 class="consectetur_text">URL'yi Oluşturan Kişi</h2><div class="box" ></div>
+                  <div class="box" >
+                    <section >
+                      <form >
+                        <div class="form-group">
+                          <h3>Kişi Bilgileri:</h3> 
+                        
+                        </div>
+                        <div class="alert alert-success">
+                          <strong>201307037</strong> Buse ÇETİN
+                        </div>
+                      </form>
+                  </section>
+                  </div>
+                </div>
+                <div class="col-sm-5">
+                  <div class="image_4"><img src="images/person.png"></div>
+                </div>
+              </div>
+            </div>
+            <div class="images_main_1">
+              <div class="row">
+                <div class="col-sm-5">
+                  <div class="image_4"><img src="images/clock.png"></div>
+                 
+                </div>
+                <div class="col-sm-7">
+                  <h2 class="consectetur_text">URL Geçerlilik Tarihi</h2><div class="box" >
+                    <section >
+                      <form >
+                        <div class="form-group">
+                          <h3>Tarihi:</h3> 
+                        
+                        </div>
+                        <div class="alert alert-success">
+                          <strong>13.12.2022</strong>
+                        </div>
+                        
+                      </form>
+                  </section>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <table class="table table-striped">
+                    <h2 class="consectetur_text">Oluşturulan URL'ler</h2><div class="box" >
+                    <thead >
+                      <tr style="color: #e45e9f">
+                        <th scope="col">Orijinal URL</th>
+                        <th scope="col">Kısaltılmış URL</th>
+                        <th scope="col">Tıklanma Sayısı</th>
+                        <th scope="col">Oluşturulma Tarihi</th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <% shortUrls.forEach(shortUrl => { %>
+                      <tr>
+                        <td><a href="<%= shortUrl.full %> "><%= shortUrl.full %></a></td>
+                      <td><a href="<%= shortUrl.short %> " target="_blank">http://localhost:3000/<%= shortUrl.short %></a></td>
+                      <td style="color: white;"><%= shortUrl.clicks %> </td>
+                          <td style="color: white"><%= shortUrl.date %></td>
+                        
+                        
+                      </tr>
+                      <% }) %>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  
+    <!-- copyright section end -->
+    <!-- Javascript files-->
+    <script src="../public/js/jquery.min.js"></script>
+    <script src="../public/js/popper.min.js"></script>
+    <script src="../public/js/bootstrap.bundle.js"></script>
+    <script src="../public/js/jquery-3.0.0.min.js"></script>
+    <script src="../public/js/plugin.js"></script>
+    <!-- sidebar -->
+    <script src="../public/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- javascript --> 
+    <script src="js/owl.carousel.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+    <script src="../public/js/vendor/scripts/core.js"></script>
+    <script src="../public/js/vendor/scripts/script.min.js"></script>
+    <script src="../public/js/vendor/scripts/process.js"></script>
+    <script src="../public/js/vendor/scripts/layout-settings.js"></script>
+
+		<!-- add sweet alert js & css in footer -->
+    <script src="../public/src/plugins/sweetalert2/sweetalert2.all.js"></script>
+    <script src="../public/src/plugins/sweetalert2/sweet-alert.init.js"></script>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript
+			><iframe
+				src="https://www.googletagmanager.com/ns.html?id=GTM-NXZMQSS"
+				height="0"
+				width="0"
+				style="display: none; visibility: hidden"
+			></iframe
+		></noscript>
+    <script>
+    $(document).ready(function(){
+    $(".fancybox").fancybox({
+    openEffect: "none",
+    closeEffect: "none"
+    });
+         
+    $(".zoom").hover(function(){
+         
+    $(this).addClass('transition');
+    }, function(){
+         
+    $(this).removeClass('transition');
+    });
+    });
+    </script> 
+    <script>
+     function openNav() {
+     document.getElementById("myNav").style.width = "100%";
+    }
+     function closeNav() {
+     document.getElementById("myNav").style.width = "0%";
+    }
+    </script>  
+</body>
+</html>
