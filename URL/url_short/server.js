@@ -8,7 +8,7 @@ const bodyParser=require('body-parser');
 
 const ShortUrl=require('./models/shortUrl')
 
-mongoose.connect('mongodb+srv://Gozdesahin:Gozdesahin14@cluster1.iagvq1w.mongodb.net/url?retryWrites=true&w=majority')
+mongoose.connect('') // can be secured with using .env i deleted to database way...
 
 app.set('view engine','ejs');
 
